@@ -11,7 +11,7 @@
 #Search-Bar {
   position: absolute;
   top: 20%;
-  size: 200%;
+  
 }
 
 .App-header {
@@ -24,6 +24,30 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-header:after {
+  content: "";
+  animation: grain 12s steps(10) infinite;
+  background-size: cover;
+  background-image: url("smoke.jpg");
+  height: 300%;
+  width: 300%;
+  opacity: 0.3;
+  position: fixed;
+}
+
+@keyframes grain {
+   0%, 100% { transform:translate(0, 0) }
+  10% { transform:translate(-2%, -3%) }
+  20% { transform:translate(-4%, -3%) }
+  30% { transform:translate(-2%, -1%) }
+  40% { transform:translate(0%, 1%) }
+  50% { transform:translate(2%, 3%) }
+  60% { transform:translate(2%, 1%) }
+  70% { transform:translate(0%, -1%) }
+  80% { transform:translate(-2%, -1%) }
+  90% { transform:translate(0%, 1%) }
 }
 
 .App-link {
